@@ -1,5 +1,9 @@
 describe("Descripción del grupo", function() {
-  it("Cada valor tiene +10", function() {
-    [1, 2, 3, 4, 5].to.eql(numerosMasDiez)
-  })
+  
+  const result = [11, 12, 13, 14, 15];
+  
+  const makeTest = (val, i) => it(`El valor de la posición ${i} tiene que ser ${val}`, () => assert.equal(numerosMasDiez[i], val))
+  
+  
+  result.forEach(makeTest)
 })
